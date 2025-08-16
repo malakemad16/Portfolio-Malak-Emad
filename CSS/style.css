@@ -5,6 +5,7 @@
 }
 body {
   font-family: "Inter", sans-serif;
+  background-color: var(--bg-color);
 }
 html {
   scroll-behavior: smooth;
@@ -17,6 +18,10 @@ ul {
 a {
   display: block;
   text-decoration: none;
+  color: var(--white-color);
+}
+svg {
+  color: var(--white-color);
 }
 .container {
   padding-left: 15px;
@@ -43,3 +48,90 @@ a {
   }
 }
 /* End Global Rules */
+/* Start Variables */
+:root {
+  --main-color: #fe90cb;
+  --secondary-color: #f5b6eb;
+  --p-color: #8a8a8a;
+  --bg-color: #1f1f1f;
+  --white-color: #ffffff;
+  --border-color: rgba(255, 255, 255, 0.1);
+  --section-padding: 100px;
+  --main-transition: 0.6s;
+}
+/* End Variables */
+/* Start header*/
+header {
+  height: 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.nav-bar {
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border-color);
+}
+.logo {
+  color: var(--main-color);
+  text-decoration: underline;
+}
+.right-side {
+  flex: 1;
+  display: flex;
+  justify-content: space-evenly;
+}
+.sections,
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.sections > li > a {
+  padding: 25px 0;
+  position: relative;
+}
+.sections > li > a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -100%;
+  width: 100%;
+  height: 1px;
+  background-color: var(--main-color);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+  opacity: 0;
+}
+.sections > li > a:hover {
+  color: var(--main-color);
+}
+.sections > li > a:hover::before {
+  opacity: 1;
+  left: 0;
+}
+.icons li a > svg {
+  font-size: 20px;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+.icons li a > svg:hover {
+  scale: 1.4;
+}
+.hamburger-list-button {
+  display: none;
+  background-color: transparent;
+  border: none;
+}
+.hamburger-list-icon {
+  font-size: 20px;
+}
+/* End Nav-bar */
