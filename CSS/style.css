@@ -86,6 +86,9 @@ p {
   color: var(--black-color);
   font-weight: 500;
 }
+.main-title span {
+  color: var(--main-color);
+}
 /* End Global Rules */
 /* Start Variables */
 :root {
@@ -97,7 +100,7 @@ p {
   --black-color: #000000;
   --border-color: rgba(255, 255, 255, 0.1);
   --section-padding: 100px;
-  --main-transition: 0.6s;
+  --main-transition: 0.3s;
 }
 /* End Variables */
 /* Start header*/
@@ -188,7 +191,7 @@ header {
   justify-content: center;
   align-items: center;
 }
-.main-title {
+.hero .main-title {
   color: var(--main-color);
 }
 .hero .container {
@@ -271,3 +274,56 @@ header {
   color: var(--main-color);
 }
 /* End About Swction */
+/* Start Services Section */
+.services {
+  padding: var(--section-padding) 0;
+  text-align: center;
+}
+.services .main-title {
+  margin-bottom: 50px;
+  font-size: 35px;
+}
+.boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
+}
+.box {
+  padding: 30px 20px;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+.box:hover {
+  border-color: var(--main-color);
+}
+.box svg {
+  margin-bottom: 15px;
+  font-size: 45px;
+  color: var(--main-color);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+.box:hover svg {
+  scale: 1.3;
+}
+.box h3 {
+  font-size: 20px;
+  margin: 10px 0;
+}
+.box p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+/* End Services Section */
