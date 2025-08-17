@@ -82,6 +82,10 @@ p {
 .main-btn:hover {
   scale: 1.1;
 }
+.main-btn a {
+  color: var(--black-color);
+  font-weight: 500;
+}
 /* End Global Rules */
 /* Start Variables */
 :root {
@@ -98,7 +102,6 @@ p {
 /* End Variables */
 /* Start header*/
 header {
-  height: 100px;
   position: fixed;
   top: 0;
   left: 0;
@@ -172,6 +175,10 @@ header {
 .hamburger-list-icon {
   font-size: 20px;
 }
+/* Styles used in JS */
+.bg-black {
+  background-color: var(--black-color);
+}
 /* End Nav-bar */
 /* Start hero Section */
 .hero {
@@ -182,23 +189,6 @@ header {
   align-items: center;
 }
 .main-title {
-  color: var(--main-color);
-}
-.main-btn a {
-  color: var(--black-color);
-  font-weight: 500;
-}
-.down-btn {
-  background-color: transparent;
-  color: var(--white-color);
-  text-decoration: underline;
-  transition: var(--main-transition);
-  -webkit-transition: var(--main-transition);
-  -moz-transition: var(--main-transition);
-  -ms-transition: var(--main-transition);
-  -o-transition: var(--main-transition);
-}
-.down-btn:hover {
   color: var(--main-color);
 }
 .hero .container {
@@ -239,3 +229,45 @@ header {
   -o-border-radius: 10px;
 }
 /* End hero Section */
+/* Start About Swction */
+.about {
+  padding: var(--section-padding) 0;
+}
+.about .container {
+  padding: 30px;
+  background-color: var(--black-color);
+}
+.about .text-content h5 {
+  color: var(--p-color);
+  font-size: 15px;
+}
+.about .text-content h2 {
+  font-size: 40px;
+  margin: 20px 0 5px;
+  color: var(--main-color);
+}
+.about .text-content h4 {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+.about .text-content p {
+  line-height: 1.8;
+}
+.about .skills {
+  margin: 30px 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.about .skills li {
+  width: 45%;
+  font-weight: bold;
+  margin: 10px 0;
+}
+.about .skills li::before {
+  font-family: "font awesome 5 free";
+  content: "\f00c";
+  margin-right: 10px;
+  font-size: 25px;
+  color: var(--main-color);
+}
+/* End About Swction */
