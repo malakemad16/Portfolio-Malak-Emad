@@ -2,10 +2,13 @@
 * {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 body {
   font-family: "Inter", sans-serif;
   background-color: var(--bg-color);
+  color: var(--white-color);
 }
 html {
   scroll-behavior: smooth;
@@ -23,6 +26,17 @@ a {
 svg {
   color: var(--white-color);
 }
+img {
+  max-width: 100%;
+}
+button {
+  border: none;
+  outline: none;
+}
+p {
+  color: var(--p-color);
+}
+/* Utility classes */
 .container {
   padding-left: 15px;
   padding-right: 15px;
@@ -47,6 +61,27 @@ svg {
     width: 1170px;
   }
 }
+.btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  cursor: pointer;
+}
+.main-btn {
+  background-color: var(--main-color);
+  color: var(--bg-color);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+.main-btn:hover {
+  scale: 1.1;
+}
 /* End Global Rules */
 /* Start Variables */
 :root {
@@ -55,6 +90,7 @@ svg {
   --p-color: #8a8a8a;
   --bg-color: #1f1f1f;
   --white-color: #ffffff;
+  --black-color: #000000;
   --border-color: rgba(255, 255, 255, 0.1);
   --section-padding: 100px;
   --main-transition: 0.6s;
@@ -72,9 +108,11 @@ header {
   height: 70px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   border-bottom: 1px solid var(--border-color);
 }
 .logo {
+  padding: 25px 0;
   color: var(--main-color);
   text-decoration: underline;
 }
@@ -135,3 +173,69 @@ header {
   font-size: 20px;
 }
 /* End Nav-bar */
+/* Start hero Section */
+.hero {
+  height: calc(100vh - 100px);
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-title {
+  color: var(--main-color);
+}
+.main-btn a {
+  color: var(--black-color);
+  font-weight: 500;
+}
+.down-btn {
+  background-color: transparent;
+  color: var(--white-color);
+  text-decoration: underline;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+.down-btn:hover {
+  color: var(--main-color);
+}
+.hero .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hero .text-content {
+  width: 50%;
+}
+.hero .text-content h4 {
+  margin-bottom: 10px;
+  font-size: 25px;
+  font-weight: normal;
+  color: var(--p-color);
+}
+.hero .text-content h1 {
+  font-size: 35px;
+}
+.hero .text-content h2 {
+  font-size: 35px;
+  font-weight: normal;
+  line-height: 0.9;
+}
+.hero .text-content p {
+  margin: 20px 0;
+  font-size: 14px;
+  line-height: 1.8;
+}
+.hero .image-container {
+  width: 40%;
+}
+.hero .image-container img {
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+/* End hero Section */
