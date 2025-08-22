@@ -35,6 +35,10 @@ button {
 }
 p {
   color: var(--p-color);
+  line-height: 1.8;
+}
+span {
+  color: var(--main-color);
 }
 /* Utility classes */
 .container {
@@ -61,6 +65,11 @@ p {
     width: 1170px;
   }
 }
+.main-title-section {
+  margin-bottom: 50px;
+  font-size: 35px;
+  text-align: center;
+}
 .btn {
   padding: 10px 20px;
   border-radius: 5px;
@@ -86,7 +95,17 @@ p {
   color: var(--black-color);
   font-weight: 500;
 }
-.main-title span {
+.sec-btn {
+  background-color: transparent;
+  color: var(--white-color);
+  text-decoration: underline;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+.sec-btn:hover a {
   color: var(--main-color);
 }
 /* End Global Rules */
@@ -109,6 +128,7 @@ header {
   top: 0;
   left: 0;
   right: 0;
+  z-index: 1000;
 }
 .nav-bar {
   height: 70px;
@@ -123,9 +143,9 @@ header {
   text-decoration: underline;
 }
 .right-side {
-  flex: 1;
+  flex: 0.75;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 .sections,
 .icons {
@@ -219,7 +239,6 @@ header {
 .hero .text-content p {
   margin: 20px 0;
   font-size: 14px;
-  line-height: 1.8;
 }
 .hero .image-container {
   width: 40%;
@@ -253,9 +272,6 @@ header {
   font-size: 25px;
   margin-bottom: 20px;
 }
-.about .text-content p {
-  line-height: 1.8;
-}
 .about .skills {
   margin: 30px 0 20px;
   display: flex;
@@ -278,10 +294,6 @@ header {
 .services {
   padding: var(--section-padding) 0;
   text-align: center;
-}
-.services .main-title {
-  margin-bottom: 50px;
-  font-size: 35px;
 }
 .boxes {
   display: grid;
@@ -323,7 +335,55 @@ header {
   margin: 10px 0;
 }
 .box p {
-  line-height: 1.6;
   margin-bottom: 15px;
 }
 /* End Services Section */
+/* Start Projects Section */
+.projects {
+  padding: var(--section-padding) 0;
+}
+.project-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.project-box.reverse {
+  flex-direction: row-reverse;
+}
+.project-image {
+  width: 50%;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+.project-image:hover {
+  box-shadow: 0 4px 8px 0 var(--main-color), 0 6px 20px 0 var(--main-color);
+}
+.project-box .text-content {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+.project-box .text-content h4 {
+  font-size: 15px;
+  font-weight: normal;
+}
+.project-box .text-content h3 {
+  font-size: 25px;
+  margin-bottom: 12px;
+}
+.project-box .text-content p {
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+/* End Projects Section */
