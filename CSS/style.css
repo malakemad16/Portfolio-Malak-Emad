@@ -389,7 +389,7 @@ header {
 /* End Projects Section */
 /* Start Contact Section */
 .contact {
-  padding: var(--section-padding) 0;
+  padding: var(--section-padding) 0 30px;
 }
 .contact-content {
   display: flex;
@@ -465,3 +465,9 @@ header {
   resize: none;
 }
 /* End Contact Section */
+/* Footer */
+footer {
+  background-color: var(--black-color);
+  text-align: center;
+  padding: 10px;
+}
