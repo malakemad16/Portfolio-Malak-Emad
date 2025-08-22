@@ -21,3 +21,9 @@ shareBtn.addEventListener('click', () => {
             console.error("Failed to copy: ", err);
         });
 });
+//
+let sectionLinks = document.querySelector(".sections");
+
+function close_open_menu() {
+    sectionLinks.classList.toggle("activate");
+}
