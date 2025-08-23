@@ -512,6 +512,22 @@ footer {
   .hero .text-content p {
     margin: 10px 0;
   }
+  /* about section */
+  .about .skills {
+    margin: 20px 0 10px;
+  }
+  .about .skills li {
+    width: 100%;
+  }
+  .about .text-content h2 {
+    font-size: 30px;
+  }
+  .about .text-content h4 {
+    font-size: 20px;
+  }
+  .about .text-content p {
+    font-size: 14px;
+  }
 }
 /* medium */
 @media (max-width: 993px) {
