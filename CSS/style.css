@@ -228,6 +228,9 @@ header {
   justify-content: space-between;
   align-items: center;
 }
+.hero .image-container {
+  width: 300px;
+}
 .hero .text-content {
   width: 50%;
 }
@@ -248,9 +251,6 @@ header {
 .hero .text-content p {
   margin: 20px 0;
   font-size: 14px;
-}
-.hero .image-container {
-  width: 35%;
 }
 .hero .image-container img {
   border-radius: 10px;
@@ -497,10 +497,25 @@ footer {
   cursor: pointer;
 }
 /* small */
-@media (min-width: 768px) {
+@media (max-width: 769px) {
+  /* hero section */
+  .hero .container {
+    text-align: center;
+    flex-direction: column-reverse;
+  }
+  .hero .text-content {
+    width: 100%;
+  }
+  .hero .image-container {
+    margin-bottom: 30px;
+  }
+  .hero .text-content p {
+    margin: 10px 0;
+  }
 }
 /* medium */
 @media (max-width: 993px) {
+  /* nav-bar */
   .sections {
     flex-direction: column;
     width: 400px;

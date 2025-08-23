@@ -27,3 +27,8 @@ let sectionLinks = document.querySelector(".sections");
 function close_open_menu() {
     sectionLinks.classList.toggle("activate");
 }
+let allLinks = document.querySelectorAll(".sections li");
+
+allLinks.forEach((e) => {
+    e.addEventListener('click', close_open_menu);
+})
