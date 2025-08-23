@@ -12,7 +12,7 @@ window.onscroll = () => {
 let shareBtn = document.querySelector(".share-btn");
 
 shareBtn.addEventListener('click', () => {
-    const portfolioLink = "http://127.0.0.1:5500/index.html#";
+    const portfolioLink = "https://malakemad16.github.io/Portfolio-Malak-Emad/";
     navigator.clipboard.writeText(portfolioLink)
         .then(() => {
             alert("Portfolio link copied! 🚀");
