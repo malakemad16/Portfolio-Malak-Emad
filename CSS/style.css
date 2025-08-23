@@ -544,6 +544,14 @@ footer {
   .project-box .text-content {
     width: 70%;
   }
+  /* contact section */
+  .contact-content {
+    flex-direction: column-reverse;
+  }
+  .contact-info {
+    width: 100%;
+    margin-top: 25px;
+  }
 }
 /* medium */
 @media (max-width: 993px) {
