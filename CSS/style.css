@@ -572,6 +572,7 @@ footer {
     -moz-transition: var(--main-transition) ease-in-out;
     -ms-transition: var(--main-transition) ease-in-out;
     -o-transition: var(--main-transition) ease-in-out;
+    z-index: 1000;
   }
   .sections.activate {
     left: 0;
